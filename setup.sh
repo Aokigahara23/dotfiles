@@ -8,5 +8,5 @@ ln -sf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 
 # Link vscode settings
 mkdir -p $HOME/.config/Code/User
-ln -sf ./settings.json $HOME/.config/Code/User/settings.json
-ln -sf ./keybindings.json $HOME/.config/Code/User/keybindings.json
+ln -sf $HOME/.dotfiles/settings.json $HOME/.config/Code/User/settings.json
+ln -sf $HOME/.dotfiles/keybindings.json $HOME/.config/Code/User/keybindings.json
