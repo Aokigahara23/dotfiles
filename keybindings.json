@@ -31,5 +31,28 @@
   {
     "key": "ctrl+1",
     "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+/",
+    "when": "editorTextFocus && neovim.init && neovim.mode == visual",
+    "args": "gc"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+r",
+    "when": "editorTextFocus && neovim.init",
+    "args": "<C-r>"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+o",
+    "when": "editorTextFocus && neovim.init",
+    "args": "<C-o>"
   }
 ]

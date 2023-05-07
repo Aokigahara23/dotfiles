@@ -87,5 +87,6 @@
 
   // Ansible
   "ansible.python.interpreterPath": "/home/forest23/src/ansible-venvs/2.12.5/bin/python",
-  "pylint.importStrategy": "fromEnvironment"
+  "pylint.importStrategy": "fromEnvironment",
+  "vsicons.dontShowNewVersionMessage": true
 }
