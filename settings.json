@@ -28,6 +28,8 @@
 
   // File associations
   "files.associations": {
+    "*plays.yml": "ansible",
+    "*init.yml": "yaml",
     "*.yml": "ansible"
   },
 
@@ -79,10 +81,10 @@
   // Copilot
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
     "plaintext": false,
     "markdown": true,
-    "scminput": false
+    "scminput": false,
+    "yaml": false
   },
 
   // Ansible
