@@ -112,3 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # eval "$(starship init zsh)"
+
+# Created by `pipx` on 2023-11-08 09:00:15
+export PATH="$PATH:/home/forest23/.local/bin"
+export EDITOR="v"

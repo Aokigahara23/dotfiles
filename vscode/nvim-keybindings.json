@@ -1,0 +1,93 @@
+// Place your key bindings in this file to override the defaults
+[
+  // VIM stuff
+  {
+    // go to definition with "l d" keybinding
+    "key": "l d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'normal'"
+  },
+  {
+    // go back with "l c" keybinding
+    "key": "l c",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack && editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    // show help tooltip overvariable with "c h" keybinding, vim normal mode
+    "key": "l h",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'normal'"
+  },
+  {
+    // show signature help with "c s" keybinding, vim normal mode
+    "key": "l s",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'normal'"
+  },
+  {
+    // toggle rename with "c r" keybinding, vim normal mode
+    "key": "l r",
+    "command": "editor.action.rename",
+    "when": "editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'normal'"
+  },
+  {
+    // show references with "l o" keybinding, vim normal mode
+    "key": "l o",
+    "command": "editor.action.referenceSearch.trigger",
+    "when": "editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'normal'",
+    "args": {
+      "triggerSearch": true
+    }
+  },
+  {
+    // toggle search current file with "s f" keybinding
+    "key": "ctrl+f",
+    "command": "actions.find",
+    "when": "editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'visual'"
+  },
+  {
+    // toggle search of hover word in files "s g" keybinding
+    "key": "ctrl+shift+f",
+    "command": "workbench.action.findInFiles",
+    "when": "editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'visual'"
+  },
+  {
+    // toggle search and replace of word in current file with "s r" keybinding
+    "key": "ctrl+r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorTextFocus && !isInEmbeddedEditor && neovim.mode == 'visual'"
+  },
+  {
+    // toggle breakpoint with 'ctrl+shift+b' keybinding
+    "key": "ctrl+shift+b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
+  },
+  // remove neovim blockers
+  {
+    "key": "ctrl+w",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal.w && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.w && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-vscode-neovim.ctrl-d",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal.d && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.d && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "f9",
+    "command": "-editor.debug.action.toggleBreakpoint",
+    "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
+  }
+]

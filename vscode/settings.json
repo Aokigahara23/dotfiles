@@ -1,0 +1,57 @@
+{
+  "workbench.colorTheme": "Catppuccin Frappé",
+
+  "window.titleBarStyle": "custom",
+  "window.customMenuBarAltFocus": false,
+  "window.enableMenuBarMnemonics": false,
+
+  "editor.fontFamily": "JetBrainsMono Nerd font",
+  "editor.fontSize": 17,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.cursorSurroundingLines": 8,
+  "editor.cursorStyle": "block",
+
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+
+  "keyboard.dispatch": "keyCode",
+
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.languageServer": "Pylance",
+  "python.missingPackage.severity": "Warning",
+  "python.testing.pytestEnabled": true,
+
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "eeyore.yapf",
+    "editor.formatOnType": false
+  },
+
+  "ruff.lint.run": "onSave",
+  "ruff.organizeImports": false,
+  "ruff.codeAction.fixViolation": {
+    "enable": false
+  },
+  "ruff.fixAll": false,
+  "isort.check": true,
+  "isort.importStrategy": "fromEnvironment",
+  "workbench.iconTheme": "vscode-icons",
+  "catppuccin.italicKeywords": false,
+
+  "files.associations": {
+    "*.yml": "ansible",
+    "*.yaml": "yaml"
+  },
+  "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "git.confirmSync": false
+}
