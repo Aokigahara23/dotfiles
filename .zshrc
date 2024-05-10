@@ -116,3 +116,7 @@ source $ZSH/oh-my-zsh.sh
 # Created by `pipx` on 2023-11-08 09:00:15
 export PATH="$PATH:/home/forest23/.local/bin"
 export EDITOR="v"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

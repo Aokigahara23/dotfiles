@@ -1,23 +1,20 @@
 {
-  "workbench.colorTheme": "Catppuccin Frappé",
-
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "workbench.colorTheme": "Catppuccin Mocha",
   "window.titleBarStyle": "custom",
   "window.customMenuBarAltFocus": false,
   "window.enableMenuBarMnemonics": false,
-
   "editor.fontFamily": "JetBrainsMono Nerd font",
   "editor.fontSize": 17,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.cursorSurroundingLines": 8,
   "editor.cursorStyle": "block",
-
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "asvetliakov.vscode-neovim": 1,
+    "vscodevim.vim": 1
   },
-
   "keyboard.dispatch": "keyCode",
-
   "python.analysis.autoFormatStrings": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
@@ -25,17 +22,15 @@
   "python.languageServer": "Pylance",
   "python.missingPackage.severity": "Warning",
   "python.testing.pytestEnabled": true,
-
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     },
     "editor.formatOnSaveMode": "file",
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "eeyore.yapf",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnType": false
   },
-
   "ruff.lint.run": "onSave",
   "ruff.organizeImports": false,
   "ruff.codeAction.fixViolation": {
@@ -46,12 +41,147 @@
   "isort.importStrategy": "fromEnvironment",
   "workbench.iconTheme": "vscode-icons",
   "catppuccin.italicKeywords": false,
-
   "files.associations": {
     "*.yml": "ansible",
     "*.yaml": "yaml"
   },
   "redhat.telemetry.enabled": false,
   "git.openRepositoryInParentFolders": "never",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  // VIM plugin
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-w>": false,
+    "<C-o>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "l", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["<leader>", "l", "D"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "l", "s"],
+      "commands": ["editor.action.triggerParameterHints"]
+    },
+    {
+      "before": ["<leader>", "l", "h"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["<leader>", "l", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "d", "d"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    {
+      "before": ["<leader>", "d", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["<leader>", "d", "s"],
+      "commands": ["workbench.action.debug.stepOver"]
+    },
+    {
+      "before": ["<leader>", "d", "i"],
+      "commands": ["workbench.action.debug.stepInto"]
+    },
+    {
+      "before": ["<leader>", "d", "o"],
+      "commands": ["workbench.action.debug.stepOut"]
+    },
+    {
+      // disconnect from debug session
+      "before": ["<leader>", "d", "x"],
+      "commands": ["workbench.action.debug.disconnect"]
+    }
+  ],
+  "remote.autoForwardPortsSource": "hybrid",
+  "debug.console.fontFamily": "JetBrainsMono Nerd font",
+  "git.ignoreRebaseWarning": true,
+  "[cpp]": {
+    "editor.defaultFormatter": null
+  },
+  "[cmake]": {
+    "editor.defaultFormatter": "cheshirekow.cmake-format"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // COPILOT
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "debug.onTaskErrors": "debugAnyway",
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.showBreakpointsInOverviewRuler": true,
+  "cmake.configureOnOpen": true,
+  "cmake.debugConfig": {
+    "type": "cppdbg",
+    "request": "launch",
+    "program": "${command:cmake.launchTargetPath}",
+    "args": [],
+    "cwd": "${workspaceFolder}"
+  },
+  "cmake.options.statusBarVisibility": "hidden",
+  "cmake.options.advanced": {
+    "variant": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible"
+    },
+    "build": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "projectStatusVisibility": "visible"
+    },
+    "buildTarget": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "statusBarLength": 20
+    },
+    "debug": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "projectStatusVisibility": "visible"
+    },
+    "launchTarget": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "statusBarLength": 20
+    },
+    "launch": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "projectStatusVisibility": "visible"
+    }
+  },
+  // add ignoring enum-constexpr-conversion error for clangd server arguments
+  // "clangd.arguments": ["-Wno-enum-constexpr-conversion"],
+  "todohighlight.include": ["**/*.h", "**/*.cpp", "**/*.py"],
+  "clangd.checkUpdates": true,
+  "cmake.showOptionsMovedNotification": false
 }
