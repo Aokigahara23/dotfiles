@@ -10,6 +10,9 @@
   "editor.formatOnSave": true,
   "editor.cursorSurroundingLines": 8,
   "editor.cursorStyle": "block",
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground1": "#cba6f7"
+  },
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1,
     "vscodevim.vim": 1
