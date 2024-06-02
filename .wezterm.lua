@@ -13,8 +13,62 @@ config.font = wezterm.font({
 
 config.font_size = 14.0
 config.color_scheme = "Catppuccin Mocha"
-config.default_domain = "WSL:Ubuntu"
-config.enable_tab_bar = false
+config.enable_tab_bar = true
+config.use_fancy_tab_bar = false
+
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.keys = {
+  {
+    key = 'h',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = 'v',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = 't',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SpawnTab  'CurrentPaneDomain',
+  },
+  {
+    key = 'w',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.CloseCurrentTab { confirm = false },
+  },
+  {
+    key = 'LeftArrow',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.ActivateTabRelative(-1)
+  },
+  {
+    key = 'RightArrow',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.ActivateTabRelative(1)
+  },
+  {
+    key = 'LeftArrow',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'RightArrow',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection 'Right',
+  },
+  {
+    key = 'UpArrow',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection 'Up',
+  },
+  {
+    key = 'DownArrow',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection 'Down',
+  },
+}
 
 -- and finally, return the configuration to wezterm
 return config
