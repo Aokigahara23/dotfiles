@@ -126,9 +126,6 @@
   "[cpp]": {
     "editor.defaultFormatter": null
   },
-  "[cmake]": {
-    "editor.defaultFormatter": "cheshirekow.cmake-format"
-  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -150,6 +147,7 @@
     "args": [],
     "cwd": "${workspaceFolder}"
   },
+  "cmake.ctest.testExplorerIntegrationEnabled": false,
   "cmake.options.statusBarVisibility": "hidden",
   "cmake.options.advanced": {
     "variant": {
@@ -182,14 +180,14 @@
       "projectStatusVisibility": "visible"
     }
   },
-  // add ignoring enum-constexpr-conversion error for clangd server arguments
-  // "clangd.arguments": ["-Wno-enum-constexpr-conversion"],
-  "clangd.checkUpdates": true,
   "cmake.showOptionsMovedNotification": false,
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
+  // add ignoring enum-constexpr-conversion error for clangd server arguments
+  // "clangd.arguments": ["-Wno-enum-constexpr-conversion"],
+  "clangd.checkUpdates": true,
   "testMate.cpp.debug.configTemplate": {
     "type": "lldb",
     "program": "${exec}",
