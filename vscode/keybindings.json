@@ -29,7 +29,7 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "shift+a",
+    "key": "ctrl+shift+a",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
   },

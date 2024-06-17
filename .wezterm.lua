@@ -5,20 +5,20 @@ local wezterm = require("wezterm")
 local config = {}
 
 config.font = wezterm.font({
-	family = "FiraCode Nerd Font",
+	family = "JetBrainsMono Nerd Font",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
 
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+	left = "1cell",
+	right = "1cell",
+	top = "0.5cell",
+	bottom = "0.5cell",
 }
 
-config.font_size = 14.0
+config.font_size = 15.0
 config.color_scheme = "Catppuccin Mocha"
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.enable_tab_bar = true
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
@@ -38,7 +38,7 @@ config.colors = {
 		},
 		inactive_tab = {
 			bg_color = "#313244",
-			fg_color = "#6c7086",
+			fg_color = "#585b70",
 		},
 	},
 }

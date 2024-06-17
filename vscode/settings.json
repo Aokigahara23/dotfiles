@@ -4,7 +4,7 @@
   "window.customMenuBarAltFocus": false,
   "window.enableMenuBarMnemonics": false,
   "window.titleBarStyle": "native",
-  "editor.fontFamily": "FiraCode Nerd font",
+  "editor.fontFamily": "JetBrainsMono Nerd font",
   "editor.fontSize": 19,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
