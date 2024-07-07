@@ -5,3 +5,5 @@ Workspace/
 .local/
 .cache/
 .var/
+.steam/
+.ssh/
