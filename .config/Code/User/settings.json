@@ -1,0 +1,226 @@
+{
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "workbench.colorTheme": "Everforest Dark",
+  "window.customMenuBarAltFocus": false,
+  "window.enableMenuBarMnemonics": false,
+  "window.titleBarStyle": "native",
+  "editor.fontFamily": "JetBrainsMono Nerd font",
+  "editor.fontSize": 19,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.cursorSurroundingLines": 8,
+  "editor.cursorStyle": "block",
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground1": "#cba6f7"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
+    "vscodevim.vim": 1
+  },
+  "keyboard.dispatch": "keyCode",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.languageServer": "Pylance",
+  "python.missingPackage.severity": "Warning",
+  "python.testing.pytestEnabled": true,
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnType": false
+  },
+  "ruff.lint.run": "onSave",
+  "ruff.organizeImports": false,
+  "ruff.codeAction.fixViolation": {
+    "enable": false
+  },
+  "ruff.fixAll": false,
+  "isort.check": true,
+  "isort.importStrategy": "fromEnvironment",
+  "workbench.iconTheme": "material-icon-theme",
+  "catppuccin.italicKeywords": false,
+  "files.associations": {
+    "*.yml": "ansible",
+    "*.yaml": "yaml"
+  },
+  "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "git.confirmSync": false,
+  // VIM plugin
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-w>": false,
+    "<C-o>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "l", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["<leader>", "l", "D"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "l", "s"],
+      "commands": ["editor.action.triggerParameterHints"]
+    },
+    {
+      "before": ["<leader>", "l", "h"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["<leader>", "l", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "d", "d"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    {
+      "before": ["<leader>", "d", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["<leader>", "d", "s"],
+      "commands": ["workbench.action.debug.stepOver"]
+    },
+    {
+      "before": ["<leader>", "d", "i"],
+      "commands": ["workbench.action.debug.stepInto"]
+    },
+    {
+      "before": ["<leader>", "d", "o"],
+      "commands": ["workbench.action.debug.stepOut"]
+    },
+    {
+      // disconnect from debug session
+      "before": ["<leader>", "d", "x"],
+      "commands": ["workbench.action.debug.disconnect"]
+    }
+  ],
+  "remote.autoForwardPortsSource": "hybrid",
+  "debug.console.fontFamily": "JetBrainsMono Nerd font",
+  "git.ignoreRebaseWarning": true,
+  "[cpp]": {
+    "editor.defaultFormatter": null
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // COPILOT
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "debug.onTaskErrors": "debugAnyway",
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.showBreakpointsInOverviewRuler": true,
+  "cmake.configureOnOpen": true,
+  "cmake.debugConfig": {
+    "type": "lldb",
+    "request": "launch",
+    "program": "${command:cmake.launchTargetPath}",
+    "args": [],
+    "cwd": "${workspaceFolder}"
+  },
+  "cmake.ctest.testExplorerIntegrationEnabled": false,
+  "cmake.options.statusBarVisibility": "hidden",
+  "cmake.options.advanced": {
+    "variant": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible"
+    },
+    "build": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "projectStatusVisibility": "visible"
+    },
+    "buildTarget": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "statusBarLength": 20
+    },
+    "debug": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "projectStatusVisibility": "visible"
+    },
+    "launchTarget": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "statusBarLength": 20
+    },
+    "launch": {
+      "statusBarVisibility": "visible",
+      "inheritDefault": "visible",
+      "projectStatusVisibility": "visible"
+    }
+  },
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  // add ignoring enum-constexpr-conversion error for clangd server arguments
+  // "clangd.arguments": ["-Wno-enum-constexpr-conversion"],
+  "clangd.checkUpdates": true,
+  "testMate.cpp.debug.configTemplate": {
+    "type": "lldb",
+    "program": "${exec}",
+    "args": "${argsArray}",
+    "cwd": "${cwd}",
+    "env": "${envObj}",
+    "sourceFileMap": "${sourceFileMapObj}",
+    "externalConsole": false
+  },
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "background": "#a6e3a1",
+      "iconColour": "#a6e3a1",
+      "foreground": "#1D1D2D"
+    },
+    "BUG": {
+      "icon": "bug",
+      "background": "#f38ba8",
+      "foreground": "#1D1D2D",
+      "iconColour": "#f38ba8"
+    },
+    "HACK": {
+      "icon": "tools"
+    },
+    "FIXME": {
+      "icon": "flame",
+      "background": "#fab387",
+      "foreground": "#1D1D2D",
+      "iconColour": "#fab387"
+    }
+  },
+  "clangd.path": "/home/forest23/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/18.1.3/clangd_18.1.3/bin/clangd",
+  "explorer.confirmDelete": false,
+  "everforest.darkContrast": "hard"
+}
