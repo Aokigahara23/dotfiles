@@ -1,0 +1,126 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "margin": "15 15 0 15",
+  "output": [ "eDP-1", "eDP-2" ],
+
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    "bluetooth",
+    "clock"
+  ],
+  
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-left": [
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "wireplumber",
+    "backlight"
+  ],
+
+  // "wlr/taskbar": {
+  //     "format": "{icon}",
+  //     "icon-size": 14,
+  //     "icon-theme": "Numix-Circle",
+  //     "tooltip-format": "{title}",
+  //     "on-click": "activate",
+  //     "on-click-middle": "close",
+  //     "ignore-list": [
+  //        "kitty",
+  //        "firefox"
+  //     ]
+  // },
+
+  "tray": {
+      "icon-size": 21,
+      "spacing": 10
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "󰿎",
+      "urgent": "",
+      "default": "",
+      "active": ""
+    },
+
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "sort-by-number": true
+  },
+
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-icons": ["","","","",""]
+  },
+
+  "clock": {
+    "format": "󰃭 {:%a %d/%m/%y  %H:%M}"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "max-length": 30,
+    "format": "  {load}%"
+  },
+
+  "memory": {
+    "interval": 30,
+    "max-length": 30,
+    "format": "  {}%"
+  },
+
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "max-length": 30
+  },
+
+  "backlight": {
+      "format": "{icon} {percent}%",
+      "format-icons": ["",""]
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": " disconnected",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+
+    "on-click": "rofi-bluetooth",
+
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  },
+
+  "wireplumber": {
+      "format": "{icon}  {volume}%",
+      "format-muted": "",
+      "on-click": "pavucontrol-qt",
+      "format-icons": ["","",""]
+  },
+
+  "hyprland/language": {
+    "format": "{short}"
+  }
+}

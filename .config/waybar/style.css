@@ -1,0 +1,142 @@
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+
+* {
+  border-radius: 10px;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.9);
+  border-radius: 10px;
+  border: 2px solid rgba(203, 166, 247, 0.9);
+  transition: none;
+}
+
+tooltip {
+  background: @base;
+  border: 2px solid @lavender;
+  border-radius: 5px;
+  padding: 5px;
+  text-shadow: none;
+}
+
+tooltip * {
+  color: @text;
+  text-shadow: none;
+}
+
+#workspaces {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  transition: none;
+  background: transparent;
+}
+
+#workspaces button {
+  color: @text;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px;
+}
+
+#workspaces button.active {
+  color: @green;
+}
+
+.modules-left *,
+.modules-right * {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  transition: none;
+  color: @text;
+  background: transparent;
+}
+
+#cpu {
+  color: @red;
+}
+
+#memory {
+  color: @peach;
+}
+
+#temperature {
+  color: @blue;
+}
+
+#temperature.criticl {
+  color: @red;
+}
+
+#bluetooth.on {
+  color: @blue;
+}
+
+#bluetooth.off {
+  color: @overlay2;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#wireplumber {
+  color: @flamingo;
+}
+
+#battery {
+  color: @sky;
+}
+
+#clock {
+  color: @green;
+}
+
+#taskbar * {
+  padding: 0px;
+  margin: 0px 5px;
+}
+
+#tray * {
+  margin: 0 5px;
+  padding: 0px;
+}
+
+#tray menu {
+  border: 2px solid @mauve;
+  padding: 5px;
+  background: @base;
+}
