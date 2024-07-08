@@ -41,7 +41,7 @@ window#waybar {
 
 tooltip {
   background: @base;
-  border: 2px solid @lavender;
+  border: 2px solid @mauve;
   border-radius: 5px;
   padding: 5px;
   text-shadow: none;
@@ -90,7 +90,7 @@ tooltip * {
 }
 
 #memory {
-  color: @peach;
+  color: @lavender;
 }
 
 #temperature {
@@ -101,7 +101,7 @@ tooltip * {
   color: @red;
 }
 
-#bluetooth.on {
+#bluetooth {
   color: @blue;
 }
 
@@ -117,8 +117,20 @@ tooltip * {
   color: @flamingo;
 }
 
-#battery {
-  color: @sky;
+#battery.discharging {
+  color: @sapphire;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning {
+  color: @peach;
+}
+
+#battery.critical {
+  color: @red;
 }
 
 #clock {
@@ -130,6 +142,11 @@ tooltip * {
   margin: 0px 5px;
 }
 
+#tray {
+  margin: 0 5px;
+  padding: 0px;
+}
+
 #tray * {
   margin: 0 5px;
   padding: 0px;
@@ -139,4 +156,26 @@ tooltip * {
   border: 2px solid @mauve;
   padding: 5px;
   background: @base;
+}
+
+#mpris {
+  background: @lavender;
+  color: @base;
+  margin: 5px 10px;
+}
+
+#mpris.paused {
+  background: @subtext0;
+}
+
+#mpris.spotify {
+  background: @green;
+}
+
+#mpris.firefox {
+  background: @peach;
+}
+
+#mpris.mpv {
+  background: @flamingo;
 }

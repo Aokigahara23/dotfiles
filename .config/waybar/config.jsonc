@@ -6,6 +6,7 @@
   "output": [ "eDP-1", "eDP-2" ],
 
   "modules-right": [
+    "mpris",
     "tray",
     "hyprland/language",
     "bluetooth",
@@ -70,6 +71,10 @@
 
   "battery": {
     "format": "{icon}  {capacity}%",
+    "states": {
+        "warning": 20,
+        "critical": 10
+    },
     "format-icons": ["","","","",""]
   },
 
@@ -122,5 +127,19 @@
 
   "hyprland/language": {
     "format": "{short}"
+  },
+
+  "mpris": {
+    "format": "{player_icon} {position}",
+    "format-paused": "{status_icon} {position}",
+    "player-icons": {
+      "default": "",
+      "mpv": "󰿎",
+      "spotify": "",
+      "firefox": ""
+    },
+    "status-icons": {
+      "paused": ""
+    }
   }
 }
