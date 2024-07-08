@@ -10,3 +10,7 @@ Workspace/
 .npm/
 .mozilla/
 .themes/
+.icons/
+.spicetify/
+.config/spicetify
+.config/spotify
