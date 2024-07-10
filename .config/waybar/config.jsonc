@@ -130,8 +130,8 @@
   },
 
   "mpris": {
-    "format": "{player_icon} {position}",
-    "format-paused": "{status_icon} {position}",
+    "format": "{player_icon} {status}",
+    "format-paused": "{status_icon} {status}",
     "player-icons": {
       "default": "",
       "mpv": "󰿎",
