@@ -57,8 +57,13 @@ mkdir -p "$CONFIG_DIR/Code/User"
 ln -sf $CURRENT_DIR/.config/Code/User/settings.json "$CONFIG_DIR/Code/User/settings.json"
 ln -sf $CURRENT_DIR/.config/Code/User/keybindings.json "$CONFIG_DIR/Code/User/keybindings.json"
 
-#yazi
+# yazi
 mkdir -p "$CONFIG_DIR/yazi"
 ln -sf $CURRENT_DIR/.config/yazi/yazi.toml "$CONFIG_DIR/yazi/yazi.toml"
 ln -sf $CURRENT_DIR/.config/yazi/theme.toml "$CONFIG_DIR/yazi/theme.toml"
+
+# lazygit
+mkdir -p "$CONFIG_DIR/lazygit"
+ln -sf $CURRENT_DIR/.config/lazygit/config.yml "$CONFIG_DIR/lazygit/config.yml"
+
 echo "Configs linked"
