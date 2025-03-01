@@ -21,3 +21,4 @@ fish_vi_key_bindings
 set fish_greeting
 
 set -x PATH ~/.cargo/bin $PATH
+set -x PATH ~/.config/emacs/bin $PATH
