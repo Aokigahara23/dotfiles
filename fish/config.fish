@@ -27,3 +27,7 @@ fzf --fish | source
 set fish_greeting
 
 set -x PATH ~/.cargo/bin $PATH
+
+if test -z "$DISPLAY"
+  exec dbus-run-session startplasma-wayland
+end
