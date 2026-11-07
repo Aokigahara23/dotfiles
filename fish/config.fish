@@ -1,17 +1,12 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
+set -g fish_greeting
 
-### BINDS ###
-fish_default_key_bindings
+fish_add_path ~/.local/bin ~/.cargo/bin
 
-### ALIASES ###
-alias ls "exa"
-alias ll "exa -lah"
-alias tree "exa --tree"
-
-### ENV VARS ###
-set -Ux FZF_DEFAULT_OPTS "\
+set -gx EDITOR nvim
+set -gx FZF_DEFAULT_COMMAND "fd --type f --hidden --exclude .git"
+set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set -gx FZF_ALT_C_COMMAND "fd --type d --hidden --exclude .git"
+set -gx FZF_DEFAULT_OPTS "\
 --tmux center \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -19,15 +14,20 @@ set -Ux FZF_DEFAULT_OPTS "\
 --color=selected-bg:#45475a \
 --multi"
 
-### ADDONS ###
-starship init fish | source
-fzf --fish | source
+if status is-interactive
+    fish_config theme choose catppuccin-mocha
 
-### FUNCTIONS ###
-set fish_greeting
+    alias ls "eza --group-directories-first"
+    alias ll "eza -lah --git --group-directories-first"
+    alias tree "eza --tree"
 
-set -x PATH ~/.cargo/bin $PATH
+    abbr -a g git
+    abbr -a gs git status
+    abbr -a gd git diff
+    abbr -a gl git log --oneline --graph -20
+    abbr -a gc git commit
+    abbr -a gp git push
 
-if test -z "$DISPLAY"
-  exec dbus-run-session startplasma-wayland
+    starship init fish | source
+    fzf --fish | source
 end
