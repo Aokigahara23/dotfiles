@@ -1,6 +1,6 @@
 set -g fish_greeting
 
-fish_add_path ~/.local/bin ~/.cargo/bin
+fish_add_path --path "$HOME/.local/bin" "$HOME/.cargo/bin"
 
 set -gx EDITOR nvim
 set -gx FZF_DEFAULT_COMMAND "fd --type f --hidden --exclude .git"
